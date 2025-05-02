@@ -1,0 +1,30 @@
+.section {
+    --padding: var(--spacing-13);
+    padding-block: var(--padding);
+
+    /* &[section-padding-block="nav"] {
+        --padding: var(--spacing-10);
+    } */
+
+    @media (width < 768px) {
+        --padding: var(--spacing-10);
+    }
+}
+
+.wrapper {
+    --wrapper-max-width: 950px;
+    --wrapper-padding: 0;
+
+    max-width: var(--wrapper-max-width);
+    padding-inline: var(--wrapper-padding);
+    margin-inline: auto;
+    box-sizing: content-box;
+
+    &[wrapper-width="wide"] {
+        --wrapper-max-width: 1140px;
+    }
+
+    @media (width < 1130px) {
+        padding: var(--spacing-05);
+    }
+}
