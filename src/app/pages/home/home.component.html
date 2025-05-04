@@ -1,0 +1,167 @@
+<section class="section">
+    <div class="wrapper">
+        <div class="container">
+            <div class="col-3 aside-left">
+                <div class="widget widget-blue-opacity">
+                    <div class="widget-bg-image"></div>
+                    <img class="time-clock" src="assets/images/time-clock.png">
+                    <div class="date-time">
+                        <span class="hora">{{ currentTime }}</span>
+                        <span class="fecha">{{ currentDate }}</span>
+                    </div>
+                </div>
+                <div class="widget flow">
+                    <h4 class="widget-title">Completa tu perfil</h4>
+                    <span>¡Faltan los siguientes datos!</span>
+                    <div class="progress">
+                        <div class="progress-container">
+                            <div class="progress-bar" [style.width.%]="porcentaje"></div>
+                        </div>
+                        <span>{{ porcentaje }}%</span>
+                    </div>
+                    <ul class="prof-complete">
+                        <li>
+                            <img src="assets/icons/plus-solid.svg" alt="">
+                            <span>Sube una foto</span>
+                        </li>
+                        <li>
+                            <img src="assets/icons/plus-solid.svg" alt="">
+                            <span>Fecha de cumpleaños</span>
+                        </li>
+                        <li>
+                            <img src="assets/icons/plus-solid.svg" alt="">
+                            <span>Libros favoritos</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="min-wrapper">
+                    <h5 class="new-post-title">Crear nueva publicación</h5>
+                    <div class="new-post">
+                        <div class="input">
+                            <img src="assets/icons/pen-fancy-solid.svg" alt="">
+                            <input type="text" placeholder="Crear nueva publicación">
+                        </div>
+                        <ul class="media">
+                            <li class="photo-video">
+                                <img src="assets/icons/image.png" alt="">
+                                <span>Foto/Video</span>
+                            </li>
+                            <!-- <li class="feeling-activity">
+                                <img src="" alt="">
+                                <span>Impresión/Actividad</span>
+                            </li> -->
+                            <li class="book">
+                                <img src="assets/icons/book-solid.svg" alt="">
+                                <span>Reseña</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 aside-right">
+                <div class="widget flow">
+                    <h4 class="widget-title">Tus grupos</h4>
+                    <ul class="ak-groups">
+                        <li>
+                            <img src="assets/images/your-group1.jpg" alt="">
+                            <div class="your-grp">
+                                <h5>Lobillos</h5>
+                                <span>Participantes <span class="participants">3</span></span>
+                                <a>Ver publicaciones</a>
+                            </div>
+                        </li>
+                        <div class="divider"></div>
+                        <li>
+                            <img src="assets/images/your-group2.jpg" alt="">
+                            <div class="your-grp">
+                                <h5>Librería Iru</h5>
+                                <span>Participantes <span class="participants">17</span></span>
+                                <a>Ver publicaciones</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="widget flow">
+                    <h4 class="widget-title">Grupos sugeridos</h4>
+                    <div class="carr-grp">
+                        <div class="carr-grp-track" #track>
+                            <div class="carr-grp-item">
+                                <div class="sug-grp">
+                                    <img src="assets/images/sidebar-info.jpg" alt="">
+                                    <div class="grp-data-container">
+                                        <img src="assets/images/frnd-figure2.jpg" alt="">
+                                        <div class="grp-data">
+                                            <div class="grp-info">
+                                                <a>La Pañe</a>
+                                                <span>&#64;lapañe420</span>
+                                            </div>
+                                            <a class="btn-primary">Únete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carr-grp-item">
+                                <div class="sug-grp">
+                                    <img src="assets/images/sidebar-info2.jpg" alt="">
+                                    <div class="grp-data-container">
+                                        <img src="assets/images/frnd-figure3.jpg" alt="">
+                                        <div class="grp-data">
+                                            <div class="grp-info">
+                                                <a>Grupo de lectura</a>
+                                                <span>&#64;grplectura</span>
+                                            </div>
+                                            <a class="btn-primary">Únete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carr-grp-cntrl mobile-only">
+                            <button (click)="prev()">‹</button>
+                            <button (click)="next()">›</button>
+                        </div>
+                        <div class="carr-grp-dots desktop-only">
+                            <span (click)="scrollTo(0)" [class.active]="activeIndex === 0"></span>
+                            <span (click)="scrollTo(1)" [class.active]="activeIndex === 1"></span>
+                          </div>
+                    </div>
+                </div>
+                <div class="widget flow">
+                    <h4 class="widget-title">Libros más populares</h4>
+                    <div class="popular-books">
+                        <div class="book">
+                            <img src="assets/images/css.jpg" alt="">
+                            <div class="pb-info">
+                                <a>HTML, CSS y JAVASCRIPT</a>
+                                <span>Mario Rubiales Gómez</span>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <img src="assets/images/angular.jpg" alt="">
+                            <div class="pb-info">
+                                <a>Aprende Angular 18</a>
+                                <span>Develloper Raman</span>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <img src="assets/images/abismo.jpg" alt="">
+                            <div class="pb-info">
+                                <a>Salir del abismo</a>
+                                <span>Seth Godin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget flow">
+                    <h4 class="widget-title">¿Tienes alguna sugerencia?</h4>
+                    <div class="sugg">
+                        <p>Si tienes alguna sugerencia para mejorar tu experiencia en nuestra plataforma háznoslo saber.</p>
+                        <a class="btn-primary">Cuéntanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
